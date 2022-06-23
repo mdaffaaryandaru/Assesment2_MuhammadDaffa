@@ -1,21 +1,14 @@
 package org.d3if4080.test_assesment2_muhammaddaffa6706204080
 
-import android.app.Application
 import android.os.Bundle
 import android.util.Log
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
-import androidx.fragment.app.viewModels
-import androidx.lifecycle.ViewModel
+import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import org.d3if4080.test_assesment2_muhammaddaffa6706204080.Adapter.ResourceListAdapter
-import org.d3if4080.test_assesment2_muhammaddaffa6706204080.DataBase.dao.RoomDb
-import org.d3if4080.test_assesment2_muhammaddaffa6706204080.Models.History
-import org.d3if4080.test_assesment2_muhammaddaffa6706204080.Repository.HistoryRepository
 import org.d3if4080.test_assesment2_muhammaddaffa6706204080.ViewModel.HistoryViewModel
 import org.d3if4080.test_assesment2_muhammaddaffa6706204080.ViewModel.HistoryViewModelFactory
 import org.d3if4080.test_assesment2_muhammaddaffa6706204080.databinding.FragmentHistoryBinding
@@ -61,15 +54,15 @@ class HistoryFragment : Fragment() {
         }
     }
 
-    private fun updateProgress(status: TemperatureApiService.TemperatureApi.ApiStatus?) {
+    private fun updateProgress(status: TemperatureApi.ApiStatus?) {
         when (status) {
-            TemperatureApiService.TemperatureApi.ApiStatus.LOADING -> {
+            TemperatureApi.ApiStatus.LOADING -> {
                 binding.progressBar.visibility = View.VISIBLE
             }
-            TemperatureApiService.TemperatureApi.ApiStatus.SUCCESS -> {
+            TemperatureApi.ApiStatus.SUCCESS -> {
                 binding.progressBar.visibility = View.GONE
             }
-            TemperatureApiService.TemperatureApi.ApiStatus.FAILED -> {
+            TemperatureApi.ApiStatus.FAILED -> {
                 binding.progressBar.visibility = View.GONE
                 binding.networkError.visibility = View.VISIBLE
             }
