@@ -14,6 +14,7 @@ import android.widget.Switch
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.core.widget.addTextChangedListener
 import androidx.lifecycle.ViewModelProvider
+import com.bumptech.glide.Glide
 import org.d3if4080.test_assesment2_muhammaddaffa6706204080.DataBase.dao.HistoryDao
 import org.d3if4080.test_assesment2_muhammaddaffa6706204080.DataBase.dao.RoomDb
 import org.d3if4080.test_assesment2_muhammaddaffa6706204080.Models.History
@@ -52,6 +53,7 @@ class HomeFragment : Fragment() {
 
         val df = DecimalFormat("#.##")//Decimal formatter
         selectedUnit = "Fahrenheit"
+        Glide.with(binding.imageView.context).load("https://images.unsplash.com/photo-1609650793481-55b352ac866a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8d2ludGVyJTIwbmlnaHR8ZW58MHx8MHx8&w=1000&q=80").error(R.drawable.ic_baseline_broken_image_24).into(binding.imageView)
 
         binding.selectType.setOnClickListener() {
 

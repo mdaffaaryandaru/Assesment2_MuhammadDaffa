@@ -1,0 +1,35 @@
+[{
+  "input": 10,
+  "type": "Fahrenheit",
+  "convert": -11
+},{
+  "input": 20,
+  "type": "Fahrenheit",
+  "convert": -6
+},
+  {
+    "input": 30,
+    "type": "Fahrenheit",
+    "convert": -1
+  },
+  {
+    "input": 40,
+    "type": "Fahrenheit",
+    "convert": 4
+  },
+  {
+    "input": 50,
+    "type": "Fahrenheit",
+    "convert": 10
+  },
+  {
+    "input": 60,
+    "type": "Fahrenheit",
+    "convert": 15
+  },
+  {
+    "input": 70,
+    "type": "Fahrenheit",
+    "convert": 21
+  }
+]

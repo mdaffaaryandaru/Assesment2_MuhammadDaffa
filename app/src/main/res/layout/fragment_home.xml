@@ -1,12 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/BackGroundView"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".HomeFragment">
 
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.7"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@tools:sample/avatars" />
 
     <TextView
         android:id="@+id/textAppHeading"
@@ -15,6 +27,7 @@
         android:text="@string/temperature"
         android:textSize="24sp"
         android:textStyle="bold"
+        android:textColor="#29c5f6"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -29,6 +42,7 @@
         android:fontFamily="sans-serif-light"
         android:hint="@string/input_hint"
         android:inputType="numberDecimal"
+        android:textColor="#29c5f6"
         android:maxLength="6"
         android:textAlignment="center"
         android:textSize="48sp"
@@ -43,10 +57,10 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
         android:gravity="center_vertical"
+        android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textAppHeading"
-        android:orientation="horizontal" />
+        app:layout_constraintTop_toBottomOf="@+id/textAppHeading" />
 
     <TextView
         android:id="@+id/textType"
@@ -56,6 +70,7 @@
         android:layout_marginTop="24dp"
         android:text="@string/fahrenheit"
         android:textAllCaps="true"
+        android:textColor="#29c5f6"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.501"
@@ -70,7 +85,7 @@
         android:layout_marginBottom="164dp"
         android:text="@string/celcius"
         android:textAllCaps="true"
-        android:textColor="#FFBB86FC"
+        android:textColor="#9e37fe"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -85,7 +100,7 @@
         android:fontFamily="sans-serif-light"
         android:text="@string/hasil"
         android:textAlignment="center"
-        android:textColor="#FFBB86FC"
+        android:textColor="#9e37fe"
         android:textSize="48sp"
         app:layout_constraintBottom_toTopOf="@+id/textResultType"
         app:layout_constraintEnd_toEndOf="parent"
