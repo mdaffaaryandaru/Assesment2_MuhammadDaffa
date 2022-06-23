@@ -11,6 +11,7 @@ import androidx.navigation.findNavController
 import androidx.navigation.ui.setupWithNavController
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import org.d3if4080.test_assesment2_muhammaddaffa6706204080.databinding.ActivityMainBinding
+import org.d3if4080.test_assesment2_muhammaddaffa6706204080.databinding.FragmentDataTypeBinding
 import org.d3if4080.test_assesment2_muhammaddaffa6706204080.databinding.FragmentHomeBinding
 
 class MainActivity : AppCompatActivity() {
@@ -18,6 +19,7 @@ class MainActivity : AppCompatActivity() {
     private var aboutFragment = AboutFragment()
     private var historyFragment = HistoryFragment()
     private var homeFragment = HomeFragment()
+    private var dataFragment = DataTypeFragment()
 
     private lateinit var binding: ActivityMainBinding
 
@@ -58,6 +60,15 @@ class MainActivity : AppCompatActivity() {
                         .replace(R.id.fragmentContainerView, aboutFragment)
                         .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
                         .commit()
+                }
+                R.id.icdata -> {
+                    dataFragment = DataTypeFragment()
+                    supportFragmentManager
+                        .beginTransaction()
+                        .replace(R.id.fragmentContainerView, dataFragment)
+                        .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
+                        .commit()
+
                 }
             }
             true

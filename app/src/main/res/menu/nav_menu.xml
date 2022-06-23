@@ -13,4 +13,8 @@
         android:id="@+id/historyic"
         android:title="history"
         android:icon="@drawable/ic_history"/>
+    <item
+        android:id="@+id/icdata"
+        android:title="Data"
+        android:icon="@drawable/ic_dataarray"/>
 </menu>
