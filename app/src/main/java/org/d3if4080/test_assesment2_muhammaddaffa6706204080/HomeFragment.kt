@@ -31,9 +31,9 @@ class HomeFragment : Fragment() {
     lateinit var binding: FragmentHomeBinding
     lateinit var selectedUnit: String
     val ViewModel : HistoryViewModel by lazy {
-        val db = RoomDb.getInstance(requireContext())
-        val repo = HistoryRepository (db.HistoryDao)
-        val factory = HistoryViewModelFactory (repo)
+//        val db = RoomDb.getInstance(requireContext())
+//        val repo = HistoryRepository (db.HistoryDao)
+        val factory = HistoryViewModelFactory ()
         ViewModelProvider(this,factory)[HistoryViewModel::class.java]
     }
 
@@ -78,10 +78,10 @@ class HomeFragment : Fragment() {
                     binding.textResultType.text = "Fahrenheit"
                     history = History(0, rumus.toInt(),0)
                 }
-                ViewModel.InsertHistory(history)
-                ViewModel.getAllResource.observe(requireActivity()) {
-                    Log.d("tes","size histpry: " + it.size)
-                }
+//                ViewModel.InsertHistory(history)
+//                ViewModel.getAllResource.observe(requireActivity()) {
+//                    Log.d("tes","size histpry: " + it.size)
+//                }
                 binding.textResult.text = resultText
             }
         }
